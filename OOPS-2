@@ -1,0 +1,35 @@
+Ques: Encasuplation & Abstarction Code in C++?
+Ans:
+#include <iostream>
+using namespace std;
+class Student {
+    string name;
+    int age;
+    
+    public:
+    void setter(string n, int a){
+        name=n;
+        age=a;
+        
+    }
+    int getter(){
+        return age;
+    }
+    void display()
+    {
+        cout<<name<<" "<<age<<endl;
+        
+    }
+    ~Student(){
+        cout<<"destructor called"<<endl;
+        
+    }
+    
+};
+int main(){
+    Student obj1;
+     obj1.setter("meha",20);
+     obj1.display();
+     
+    
+}

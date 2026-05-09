@@ -1,0 +1,213 @@
+//single inheritance
+#include <iostream>
+using namespace std;
+class human{
+    protected: //parent
+    string name;
+};
+class person : public human
+{
+    protected;
+    int age;
+    
+}{
+    class student : public person
+    {
+        int roll_no;
+        public:
+        
+        student(string n, int a, int r)
+        {
+            name=n;
+             age=a;
+             roll no=r;
+             
+        }
+    }
+}int main(){
+    person obj("meha", 27);
+    obj.display()
+    
+}
+***************************************************************************************************************
+
+
+
+
+//multiple inheritance
+
+
+#include <iostream>
+using namespace std;
+class Human {
+protected: //parent
+	string name;
+};
+class person //parent 2
+{
+	protected:
+	int age;
+
+};
+	class student : public Human, public person//child of multiple parent
+	{
+		int roll_no;
+	public:
+
+		student(string n, int a, int r)
+		{
+			name=n;
+			age=a;
+			roll_no=r;
+
+		}
+		void display()
+		{
+		    cout<<name<<" " << age <<" "<< roll_no <<endl;
+		}
+	};
+
+int main() {
+	student obj("mehaaaa", 27,67);
+	obj.display();
+
+}
+***********************************************************************************************************
+//area of objects using inheritance and function overloading
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+class student{
+    int length;
+    int breadth;
+    
+    
+    public:
+    int area(int l, int r)
+    {
+        return(l*r);
+        
+    }
+    int area(int side)
+    {
+        return(side*side);
+    }
+};
+int main() {
+    student obj;
+    cout<<"area of rectangle is:"<<obj.area(3,4)<<endl;
+    cout<<"area od square is:"<<obj.area(4)<<endl;
+	
+
+}
+*******************************************************************************************************************
+//operator overloading
+//complex and img number
+
+#include <bits/stdc++.h>
+
+using namespace std;
+class complex {
+    int real;
+    int img;
+
+    public:
+        complex(int real, ing img)
+        {
+            this -> real = real;
+            this -> img = img;
+
+        }
+    void display()
+    {
+        cout << real << "+i" << img << endl;
+
+    }
+
+
+};
+
+int main() {
+    complex c1(3,4);
+    complex c2(2,4);
+    complex c3= c1+c2;
+    
+
+}
+*******************************************************************************************************************
+//adding 2 complex number using operator overloading in polymorphism 
+
+#include <bits/stdc++.h>
+
+using namespace std;
+class complex {
+    int real;
+    int img;
+    
+    public:
+    complex()
+    {
+        
+    }
+        complex(int real, int img)
+        {
+            this -> real = real;
+            this -> img = img;
+
+        }
+        complex operator + (complex &c){
+            complex ans;
+            ans.real= real+c.real;
+            ans.img = img+c.img;
+            return ans;
+            
+        }
+    void display()
+    {
+        cout << real << "+i" << img << endl;
+
+    }
+
+
+};
+
+int main() {
+    complex c1(3,4);
+    complex c2(2,4);
+    complex c3 = c1+c2;
+    c3.display();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
